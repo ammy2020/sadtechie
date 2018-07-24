@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^GetRight.* [OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*HTTrack.*$ [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Other_Spam_bot [OR]
+RewriteCond %{HTTP_USER_AGENT} ^.*MemoWeb.*$ [OR]
+RewriteCond %{HTTP_USER_AGENT} ^SiteSucker [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebZip [OR]
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR]
+RewriteCond %{HTTP_USER_AGENT} ^Zeus
+RewriteRule ^.*$ no_download.html [L]
+RewriteCond %{HTTP_USER_AGENT} ^.*FileHound.*$
+RewriteRule /* http://www.google.com/ [R,L]
+
+
+
+
+
+
+
